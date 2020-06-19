@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Contents from "./Contents";
 
 const FromTop = keyframes`
     0%{
@@ -31,13 +30,6 @@ const RightToLeft = keyframes`
 }
 `;
 
-const PageContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-`;
-
 const HeaderContainer = styled.div`
     display: flex;
     width: 50%;
@@ -61,15 +53,12 @@ const AboutPostContents = styled(HeaderContents)`
 
 export default function Header() {
     return (
-        <PageContainer>
-            <HeaderContainer>
-                <HeaderContents>MinSooBlog</HeaderContents>
-                <AboutPostContainer>
-                    <AboutPostContents>About</AboutPostContents>
-                    <AboutPostContents>Post</AboutPostContents>
-                </AboutPostContainer>
-            </HeaderContainer>
-            <Contents />
-        </PageContainer>
+        <HeaderContainer>
+            <HeaderContents>MinSooBlog</HeaderContents>
+            <AboutPostContainer>
+                <AboutPostContents>About</AboutPostContents>
+                <AboutPostContents>Post</AboutPostContents>
+            </AboutPostContainer>
+        </HeaderContainer>
     );
 }
